@@ -1,0 +1,10 @@
+{
+  "author" : "Wasabi_Raptor",
+  "description" : "This mod requires Open Starbound to function! https://github.com/OpenStarbound/OpenStarbound\n\nThis may add more things in the future, but currently, all this mod contains are door sprites from Metroid Zero Mission, and they function just as they do ingame! Requiring them to be hit with a weapon to open them, they even have elemental variants that must be opened with a weapon of the respective elemental type, more elemental types can be added easily or variants that require a specific weapon.\n\n\n\nI plan to add another door variant made with sprites that fit slightly better in starbound sometime later.",
+  "friendlyName" : "Raptor's Metroid Mod",
+  "link" : "steam://url/CommunityFilePage/3541573028",
+  "name" : "Raptor's Metroid Mod",
+  "steamContentId" : "3541573028",
+  "tags" : "Furniture and Objects",
+  "version" : "1.0"
+}
