@@ -1,0 +1,153 @@
+{
+	"objectName" : "wr_zeroMissionSpacePirateDoor",
+	"colonyTags" : ["door", "spacePirate"],
+	"printable" : true,
+	"rarity" : "Rare",
+	"category" : "door",
+	"price" : 130,
+	"description" : "An energy shielded door, shoot it to open it!",
+	"shortdescription" : "Space Pirate Door",
+	"race" : "spacePirate",
+
+	"apexDescription" : "A shielded door.",
+	"avianDescription" : "A shielded door.",
+	"floranDescription" : "A shielded door.",
+	"glitchDescription" : "A shielded door.",
+	"humanDescription" : "A shielded door... Seems familiar.",
+	"hylotlDescription" : "A shielded door.",
+	"novakidDescription" : "A shielded door.",
+
+
+	"animation" : "/objects/wasabiRaptor/metroidDoor/metroidDoor.animation",
+
+	"inventoryIcon" : "doorIcon.png",
+	"directives" : "",
+
+	"objectType" : "physics",
+	"smashable" : true,
+	"smashOnBreak" : false,
+	"retainObjectParametersInItem" : true,
+
+	"physicsCollisions" : {
+		"bottom" : {
+			"collisionKind" : "block",
+			"position" : [0, 0],
+			"collision" : [[0, 0],[6, 0],[6, 0.125],[0, 0.125]],
+			"enabled" : false
+		},
+		"top" : {
+			"collisionKind" : "block",
+			"position" : [0, 7.875],
+			"collision" : [[0, 0],[6, 0],[6, 0.125],[0, 0.125]],
+			"enabled" : false
+		},
+		"left" : {
+			"collisionKind" : "block",
+			"position" : [0, 0],
+			"collision" : [[0, 0],[0, 0.125],[0.125, 6],[0, 6]],
+			"enabled" : false
+		},
+		"right" : {
+			"collisionKind" : "block",
+			"position" : [7.875, 0],
+			"collision" : [[0, 0],[0, 0.125],[0.125, 6],[0, 6]],
+			"enabled" : false
+		}
+	},
+	"orientations" : [
+		{
+			"imageLayers" : [{"image":"tubeHorizontal.png"},{"image":"doorHorizontal.png:closed.1", "position":[48,0]}, {"image":"doorHorizontal.png:closed.1?flipx", "position":[-8,0]} ],
+			"imagePosition" : [0, 0],
+			"direction" : "right",
+			"renderLayer" : "Player+5",
+			"spaceScan" : 0.1,
+			"anchors" : [],
+
+			"animationPosition" : [24, 32],
+			"animationParts" : {
+				"tube" : "tubeHorizontal.png",
+				"doorRightFB" : "fullbright/doorHorizontal.png",
+				"doorLeftFB" : "fullbright/doorHorizontal.png",
+				"doorRight" : "doorHorizontal.png",
+				"doorLeft" : "doorHorizontal.png"
+			},
+			"sensorConfig" : {
+				"detectArea" : [[0.5,0.5],[5.5,7.5]]
+			},
+			"enablePhysicsColissions" : ["top","bottom"],
+			"doorLights" : ["light1","light2"],
+			"doorLightPositions" : {
+				"light1" : [-3, 0],
+				"light2" : [3, 0]
+			}
+		},
+		{
+			"imageLayers" : [{"image":"tubeVertical.png"},{"image":"doorVertical.png:closed.1", "position":[0,48]}, {"image":"doorVertical.png:closed.1?flipy", "position":[0,-8]} ],
+			"imagePosition" : [0, 0],
+			"direction" : "left",
+			"renderLayer" : "Player+5",
+			"spaceScan" : 0.1,
+			"anchors" : [],
+
+			"animationPosition" : [32, 24],
+			"animationParts" : {
+				"tube" : "tubeVertical.png",
+				"doorUpFB" : "fullbright/doorVertical.png",
+				"doorDownFB" : "fullbright/doorVertical.png",
+				"doorUp" : "doorVertical.png",
+				"doorDown" : "doorVertical.png"
+			},
+			"sensorConfig" : {
+				"detectArea" : [[0,0],[8,6]]
+			},
+			"enablePhysicsColissions" : ["left","right"],
+			"doorLights" : ["light1","light2"],
+			"doorLightPositions" : {
+				"light1" : [0, -3],
+				"light2" : [0, 3]
+			}
+		}
+	],
+	"inputNodes" : [
+		[0, 0],
+		[1, 0]
+	],
+	"outputNodes" : [
+		[0, 1]
+	],
+
+	"doorDirectives" : {
+		"default" : "?replace;787060=0060e8;d8d0c0=00d8f8;f8f8f8=f8f8f8",
+
+		"missile" : "?replace;787060=a02800;d8d0c0=f86060;f8f8f8=f8f8f8",
+		"superMissile" : "?replace;787060=189800;d8d0c0=50e800;f8f8f8=f8f8f8",
+		"powerBomb" : "?replace;787060=d09000;d8d0c0=f8e838;f8f8f8=f8f8f8",
+
+		"StrongHit" : "?replace;787060=a02800;d8d0c0=f86060;f8f8f8=f8f8f8",
+
+		"fire" : "?replace;787060=ff6031;d8d0c0=ffb29b;f8f8f8=fffefe",
+		"ice" : "?replace;787060=31a6ff;d8d0c0=9bd4ff;f8f8f8=feffff",
+		"poison" : "?replace;787060=64cd64;d8d0c0=b4e7b4;f8f8f8=fefffe",
+		"electric" : "?replace;787060=9431ff;d8d0c0=cb9bff;f8f8f8=fefeff"
+	},
+	"doorLightColors" : {
+		"default" : "#0060e8",
+
+		"missile" : "#a02800",
+		"superMissile" : "#189800",
+		"powerBomb" : "#d09000",
+
+		"StrongHit" : "#a02800",
+
+		"fire" : "#ff6031",
+		"ice" : "#31a6ff",
+		"poison" : "#64cd64",
+		"electric" : "#9431ff"
+	},
+
+	"builder" : "/objects/wasabiRaptor/metroidDoor/metroidDoor_build.lua",
+	"scripts": [
+		"/objects/wired/door/door.lua",
+		"/objects/wasabiRaptor/metroidDoor/metroidDoor.lua"
+	]
+}

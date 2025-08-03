@@ -1,0 +1,37 @@
+{
+	"frameGrid" : {
+		"size" : [64, 8],
+		"dimensions" : [1, 6],
+		"names" : [
+			[ "open.6" ],
+			[ "open.5" ],
+			[ "open.4" ],
+			[ "open.3" ],
+			[ "open.2" ],
+			[ "open.1" ]
+		]
+	},
+	"aliases" : {
+		"opened.1" : "open.6",
+
+		"closing.1" : "open.6",
+		"closing.2" : "open.5",
+		"closing.3" : "open.4",
+		"closing.4" : "open.3",
+		"closing.5" : "open.2",
+		"closing.6" : "open.2",
+
+		"closed.1" : "open.2",
+		"closedHit.1" : "open.1",
+
+		"locking.1" : "open.6",
+		"locking.2" : "open.5",
+		"locking.3" : "open.4",
+		"locking.4" : "open.3",
+		"locking.5" : "open.2",
+		"locking.6" : "open.2",
+
+		"locked.1" : "open.2",
+		"lockedHit.1" : "open.2"
+	}
+}

@@ -1,0 +1,266 @@
+{
+	"version":1,
+	"globalTagDefaults" : {
+		"directives" : "",
+		"doorDirectives" : "?replace;787060=0060e8;d8d0c0=00d8f8;f8f8f8=f8f8f8", // normal door
+		"partImage" : "",
+		"lockVisible" : "?crop;0;0;0;0",
+		"fullbrightOpacity" : "?multiply=FFFFFF7f"
+	},
+	"animatedParts": {
+		"stateTypes": {
+			"doorState": {
+				"priority" : 0,
+				"default": "closed",
+				"states": {
+					"open": {
+						"frames": 6,
+						"cycle": 0.5,
+						"mode": "transition",
+						"transition": "opened"
+					},
+					"opened" : {
+						"frames":1,
+						"cycle":0
+					},
+					"closing": {
+						"frames": 6,
+						"cycle": 0.5,
+						"mode": "transition",
+						"transition": "closed"
+					},
+					"closed": {
+						"frames":1,
+						"cycle":0
+					},
+					"closedHit" : {
+						"frames": 1,
+						"cycle": 0.1,
+						"mode": "transition",
+						"transition": "closed"
+					},
+					"locking": {
+						"frames": 6,
+						"cycle": 0.5,
+						"mode": "transition",
+						"transition": "locked"
+					},
+					"locked": {
+						"frames":1,
+						"cycle":0
+					},
+					"lockedHit" : {
+						"frames": 1,
+						"cycle": 0.1,
+						"mode": "transition",
+						"transition": "locked"
+					}
+				}
+			}
+		},
+		"parts": {
+			"tube" : {
+				"properties": {
+					"centered": true,
+					"zLevel": 2,
+					"transformationGroups": [],
+					"image": "<partImage>",
+					"processingDirectives" : "<directives><doorDirectives>"
+				}
+			},
+			"doorRight" : {
+				"properties": {
+					"centered": true,
+					"zLevel": 3,
+					"transformationGroups": [],
+					"offset" : [3.5,0],
+					"processingDirectives" : "<directives><doorDirectives>"
+				},
+				"partStates": {
+					"doorState" : {
+						"open": { "properties": { "image": "<partImage>:<doorState_state>.<doorState_frame>" } },
+						"opened" : "open",
+						"closing" : "open",
+						"closed" : "open",
+						"closedHit" : "open",
+
+						"locking" : { "properties": { "image": "<partImage>:<doorState_state>.<doorState_frame>", "processingDirectives" : "<directives>" } },
+						"locked" : "locking",
+						"lockedHit" : "locking"
+					}
+				}
+			},
+			"doorLeft" : {
+				"properties": {
+					"centered": true,
+					"zLevel": 3,
+					"transformationGroups": [],
+					"offset" : [-3.5,0],
+					"processingDirectives" : "<directives><doorDirectives>"
+				},
+				"partStates": {
+					"doorState" : {
+						"open": { "properties": { "image": "<partImage>:<doorState_state>.<doorState_frame>?flipx" } },
+						"opened" : "open",
+						"closing" : "open",
+						"closed" : "open",
+						"closedHit" : "open",
+						"locking" : { "properties": { "image": "<partImage>:<doorState_state>.<doorState_frame>", "processingDirectives" : "<directives>" } },
+						"locked" : "locking",
+						"lockedHit" : "locking"
+					}
+				}
+			},
+			"doorUp" : {
+				"properties": {
+					"centered": true,
+					"zLevel": 3,
+					"transformationGroups": [],
+					"offset" : [0,3.5],
+					"processingDirectives" : "<directives><doorDirectives>"
+				},
+				"partStates": {
+					"doorState" : {
+						"open": { "properties": { "image": "<partImage>:<doorState_state>.<doorState_frame>" } },
+						"opened" : "open",
+						"closing" : "open",
+						"closed" : "open",
+						"closedHit" : "open",
+						"locking" : { "properties": { "image": "<partImage>:<doorState_state>.<doorState_frame>", "processingDirectives" : "<directives>" } },
+						"locked" : "locking",
+						"lockedHit" : "locking"
+					}
+				}
+			},
+			"doorDown" : {
+				"properties": {
+					"centered": true,
+					"zLevel": 3,
+					"transformationGroups": [],
+					"offset" : [0,-3.5],
+					"processingDirectives" : "<directives><doorDirectives>"
+				},
+				"partStates": {
+					"doorState" : {
+						"open": { "properties": { "image": "<partImage>:<doorState_state>.<doorState_frame>?flipy" } },
+						"opened" : "open",
+						"closing" : "open",
+						"closed" : "open",
+						"closedHit" : "open",
+						"locking" : { "properties": { "image": "<partImage>:<doorState_state>.<doorState_frame>", "processingDirectives" : "<directives>" } },
+						"locked" : "locking",
+						"lockedHit" : "locking"
+					}
+				}
+			},
+			"doorRightFB" : {
+				"properties": {
+					"centered": true,
+					"zLevel": 4,
+					"transformationGroups": [],
+					"offset" : [3.5,0],
+					"fullbright" : true,
+					"processingDirectives" : "<directives><doorDirectives><fullbrightOpacity>"
+				},
+				"partStates": {
+					"doorState" : {
+						"open": { "properties": { "image": "<partImage>:<doorState_state>.<doorState_frame>" } },
+						"opened" : "open",
+						"closing" : "open",
+						"closed" : "open",
+						"closedHit" : "open",
+						"locking" : { "properties": { "image": "<partImage>:<doorState_state>.<doorState_frame>", "processingDirectives" : "<directives>", "fullbright" : false } },
+						"locked" : "locking",
+						"lockedHit" : "locking"
+					}
+				}
+			},
+			"doorLeftFB" : {
+				"properties": {
+					"centered": true,
+					"zLevel": 4,
+					"transformationGroups": [],
+					"offset" : [-3.5,0],
+					"fullbright" : true,
+					"processingDirectives" : "<directives><doorDirectives><fullbrightOpacity>"
+				},
+				"partStates": {
+					"doorState" : {
+						"open": { "properties": { "image": "<partImage>:<doorState_state>.<doorState_frame>?flipx" } },
+						"opened" : "open",
+						"closing" : "open",
+						"closed" : "open",
+						"closedHit" : "open",
+						"locking" : { "properties": { "image": "<partImage>:<doorState_state>.<doorState_frame>", "processingDirectives" : "<directives>", "fullbright" : false } },
+						"locked" : "locking",
+						"lockedHit" : "locking"
+					}
+				}
+			},
+			"doorUpFB" : {
+				"properties": {
+					"centered": true,
+					"zLevel": 4,
+					"transformationGroups": [],
+					"offset" : [0,3.5],
+					"fullbright" : true,
+					"processingDirectives" : "<directives><doorDirectives><fullbrightOpacity>"
+				},
+				"partStates": {
+					"doorState" : {
+						"open": { "properties": { "image": "<partImage>:<doorState_state>.<doorState_frame>" } },
+						"opened" : "open",
+						"closing" : "open",
+						"closed" : "open",
+						"closedHit" : "open",
+						"locking" : { "properties": { "image": "<partImage>:<doorState_state>.<doorState_frame>", "processingDirectives" : "<directives>", "fullbright" : false } },
+						"locked" : "locking",
+						"lockedHit" : "locking"
+					}
+				}
+			},
+			"doorDownFB" : {
+				"properties": {
+					"centered": true,
+					"zLevel": 4,
+					"transformationGroups": [],
+					"offset" : [0,-3.5],
+					"fullbright" : true,
+					"processingDirectives" : "<directives><doorDirectives><fullbrightOpacity>"
+				},
+				"partStates": {
+					"doorState" : {
+						"open": { "properties": { "image": "<partImage>:<doorState_state>.<doorState_frame>?flipy" } },
+						"opened" : "open",
+						"closing" : "open",
+						"closed" : "open",
+						"closedHit" : "open",
+						"locking" : { "properties": { "image": "<partImage>:<doorState_state>.<doorState_frame>?flipy", "processingDirectives" : "<directives>", "fullbright" : false } },
+						"locked" : "locking",
+						"lockedHit" : "locking"
+					}
+				}
+			}
+		}
+	},
+	"transformationGroups": {
+	},
+	"sounds": {
+		"open" : [ "/sfx/wasabiRaptor/metroid/doorOpen.ogg" ],
+		"close" : [ "/sfx/wasabiRaptor/metroid/doorClose.ogg" ]
+	},
+	"particleEmitters": {
+	},
+	"lights" : {
+		"light1" : {
+			"position" : [0, 3.5],
+			"color" : "#0060e8",
+			"active" : false
+		},
+		"light2" : {
+			"position" : [0, -3.5],
+			"color" : "#0060e8",
+			"active" : false
+		}
+	}
+}
