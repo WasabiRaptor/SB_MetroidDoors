@@ -12,7 +12,7 @@ function init()
 	self.elementalType = config.getParameter("elementalType")
 	self.hitType = config.getParameter("hitType")
 
-	local color = config.getParameter("color")
+	local color = self.damageSourceKind or self.elementalType or "default"
 	animator.setGlobalTag("doorDirectives", config.getParameter("doorDirectives")[color])
 	animator.setGlobalTag("directives", config.getParameter("directives"))
 	local lightColors = config.getParameter("doorLightColors")
