@@ -101,6 +101,7 @@ function applyDamageRequest(damageRequest)
 		end
 	end
 	self.sensorConfig.detectTimer = 5
+	animator.playSound("openingHit")
 	openDoor()
 	return {}
 end
