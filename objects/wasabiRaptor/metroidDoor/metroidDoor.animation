@@ -248,8 +248,8 @@
 		"open" : [ "/sfx/wasabiRaptor/metroid/doorOpen.ogg" ],
 		"close" : [ "/sfx/wasabiRaptor/metroid/doorClose.ogg" ],
 		"lockedHit" : ["/sfx/wasabiRaptor/metroid/Basic_Shot_Impact.ogg"],
-		"closedHit" : [ "/sfx/melee/blunt_hit_organic.ogg" ],
-		"openingHit" : [ "/sfx/melee/blunt_hit_organic.ogg" ]
+		"closedHit" : [ "/sfx/wasabiRaptor/metroid/Basic_Shot_Impact.ogg" ],
+		"openingHit" : [ "/sfx/wasabiRaptor/metroid/Basic_Shot_Impact.ogg" ]
 	},
 	"particleEmitters": {
 	},
