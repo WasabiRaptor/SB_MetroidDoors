@@ -4,7 +4,6 @@
 		"directives" : "",
 		"doorDirectives" : "?replace;787060=0060e8;d8d0c0=00d8f8;f8f8f8=f8f8f8", // normal door
 		"partImage" : "",
-		"lockVisible" : "?crop;0;0;0;0",
 		"fullbrightOpacity" : "?multiply=FFFFFF7f"
 	},
 	"animatedParts": {
