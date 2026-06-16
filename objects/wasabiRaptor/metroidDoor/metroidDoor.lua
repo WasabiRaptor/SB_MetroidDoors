@@ -75,28 +75,33 @@ end
 function applyDamageRequest(damageRequest)
 	if storage.state or (animator.animationStateTimer("doorState") < animator.stateCycle("doorState")) then return {} end -- don't do anything special if its open or the door is animating
 
+	if storage.locked then
+		animator.setAnimationState("doorState", "lockedHit")
+		animator.playSound("lockedHit")
+		return {}
+	end
 	if self.damageSourceKind then
 		if not (self.damageSourceKind == damageRequest.damageSourceKind) then
-			animator.setAnimationState("doorState", storage.locked and "lockedHit" or "closedHit")
+			animator.setAnimationState("doorState", "closedHit")
+			animator.playSound("closedHit")
 			return {}
 		end
 	elseif self.elementalType then
 		if not (self.elementalType == root.elementalType(damageRequest.damageSourceKind)) then
-			animator.setAnimationState("doorState", storage.locked and "lockedHit" or "closedHit")
+			animator.setAnimationState("doorState", "closedHit")
+			animator.playSound("closedHit")
 			return {}
 		end
 	end
 	if self.hitType then
 		if not (self.hitType == damageRequest.hitType) then
-			animator.setAnimationState("doorState", storage.locked and "lockedHit" or "closedHit")
+			animator.setAnimationState("doorState", "closedHit")
+			animator.playSound("closedHit")
 			return {}
 		end
 	end
-
 	self.sensorConfig.detectTimer = 5
-	if not storage.locked then
-		openDoor()
-	end
+	openDoor()
 	return {}
 end
 

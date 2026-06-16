@@ -246,7 +246,9 @@
 	},
 	"sounds": {
 		"open" : [ "/sfx/wasabiRaptor/metroid/doorOpen.ogg" ],
-		"close" : [ "/sfx/wasabiRaptor/metroid/doorClose.ogg" ]
+		"close" : [ "/sfx/wasabiRaptor/metroid/doorClose.ogg" ],
+		"lockedHit" : ["/sfx/wasabiRaptor/metroid/Basic_Shot_Impact.ogg"],
+		"closedHit" : ["/sfx/wasabiRaptor/metroid/Basic_Shot_Impact.ogg"]
 	},
 	"particleEmitters": {
 	},
