@@ -104,7 +104,7 @@
 						"closing" : "open",
 						"closed" : "open",
 						"closedHit" : "open",
-						"locking" : { "properties": { "image": "<partImage>:<doorState_state>.<doorState_frame>", "processingDirectives" : "<directives>" } },
+						"locking" : { "properties": { "image": "<partImage>:<doorState_state>.<doorState_frame>?flipx", "processingDirectives" : "<directives>" } },
 						"locked" : "locking",
 						"lockedHit" : "locking"
 					}
@@ -146,7 +146,7 @@
 						"closing" : "open",
 						"closed" : "open",
 						"closedHit" : "open",
-						"locking" : { "properties": { "image": "<partImage>:<doorState_state>.<doorState_frame>", "processingDirectives" : "<directives>" } },
+						"locking" : { "properties": { "image": "<partImage>:<doorState_state>.<doorState_frame>?flipy", "processingDirectives" : "<directives>" } },
 						"locked" : "locking",
 						"lockedHit" : "locking"
 					}
@@ -190,7 +190,7 @@
 						"closing" : "open",
 						"closed" : "open",
 						"closedHit" : "open",
-						"locking" : { "properties": { "image": "<partImage>:<doorState_state>.<doorState_frame>", "processingDirectives" : "<directives>", "fullbright" : false } },
+						"locking" : { "properties": { "image": "<partImage>:<doorState_state>.<doorState_frame>?flipx", "processingDirectives" : "<directives>", "fullbright" : false } },
 						"locked" : "locking",
 						"lockedHit" : "locking"
 					}

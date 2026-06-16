@@ -146,7 +146,6 @@
 
 	"builder" : "/objects/wasabiRaptor/metroidDoor/metroidDoor_build.lua",
 	"scripts": [
-		"/objects/wired/door/door.lua",
 		"/objects/wasabiRaptor/metroidDoor/metroidDoor.lua"
 	]
 }
